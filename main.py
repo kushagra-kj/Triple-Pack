@@ -31,7 +31,7 @@ def write_text(text, scr, pos, fsize, fcol, fname, center=True):
 ################################################## MENU SCREEN #########################################################
 
 def menu_scr():
-    global next_scr
+
     menuImg_x = (window_width * 0.45)
     menuImg_y = (window_height * 0.30)
     change_menu_x = 5
@@ -377,7 +377,7 @@ def tomjerry_ghosts_3():
             change_x = 0
             change_y = 0
         if win_condition():
-            write_text("YOU WIN !", game_disp, [window_width // 2, window_height // 2], 90, red, 'Bright Orchid.ttf')
+            write_text("YOU WIN !", game_disp, [window_width // 2, window_height // 2], 90, black, 'Sunday Morning.ttf')
 
             for event in pygame.event.get():
 
@@ -587,7 +587,7 @@ def tomjerry_ghosts_4():
         player_x += change_x
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
-            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, black, 'Bright Orchid.ttf')
+            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, black, 'Sunday Morning')
             for event in pygame.event.get():
 
                 if event.type == pygame.QUIT:
@@ -623,7 +623,7 @@ def tomjerry_ghosts_4():
             change_x = 0
             change_y = 0
         if win_condition():
-            write_text("YOU WIN !", game_disp, [window_width // 2, window_height // 2], 90, red, 'Bright Orchid.ttf')
+            write_text("YOU WIN !", game_disp, [window_width // 2, window_height // 2], 90, black, 'Sunday Morning')
 
             for event in pygame.event.get():
 
@@ -635,7 +635,7 @@ def tomjerry_ghosts_4():
         score = calculate_score(score, player_x, player_y)
         print_score(score)
         pygame.display.update()
-        clock.tick(60)
+        clock.tick(8)
 
 ######################################### CHRISTMAS 3GHOST PLAY SCREEN #################################################
 
@@ -830,8 +830,22 @@ def christmas_ghosts_3():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
             for event in pygame.event.get():
@@ -1052,9 +1066,32 @@ def christmas_ghosts_4():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
+            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
+        if kill(ghost4_x, ghost4_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
 
             for event in pygame.event.get():
@@ -1272,8 +1309,22 @@ def halloween_ghosts_3():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
             for event in pygame.event.get():
@@ -1284,7 +1335,7 @@ def halloween_ghosts_3():
             change_x = 0
             change_y = 0
         if win_condition():
-            write_text("YOU WIN !", game_disp, [window_width // 2, window_height // 2], 90, red, 'Bright Orchid.ttf')
+            write_text("YOU WIN !", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
             for event in pygame.event.get():
 
                 if event.type == pygame.QUIT:
@@ -1494,10 +1545,33 @@ def halloween_ghosts_4():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
-            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, black, 'Sunday Morning.ttf')
+            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
+        if kill(ghost4_x, ghost4_y, player_x, player_y):
+            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
             for event in pygame.event.get():
 
                 if event.type == pygame.QUIT:
